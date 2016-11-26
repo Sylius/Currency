@@ -27,7 +27,7 @@ class CurrencyConverter implements CurrencyConverterInterface
     /**
      * @var array
      */
-    private $cache;
+    protected $cache = [];
 
     /**
      * @param RepositoryInterface $currencyRepository
@@ -70,7 +70,7 @@ class CurrencyConverter implements CurrencyConverterInterface
      *
      * @return CurrencyInterface
      */
-    private function getCurrency($code)
+    protected function getCurrency($code)
     {
         if (isset($this->cache[$code])) {
             return $this->cache[$code];
