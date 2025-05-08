@@ -76,7 +76,7 @@ final class CompositeCurrencyContextTest extends TestCase
         self::assertSame('BTC', $this->compositeCurrencyContext->getCurrencyCode());
     }
 
-    public function testIfNestedRequestResolversCanHavePriority(): void
+    public function testNestedRequestResolversCanHavePriority(): void
     {
         $firstCurrencyContextMock = $this->createMock(CurrencyContextInterface::class);
         $secondCurrencyContextMock = $this->createMock(CurrencyContextInterface::class);
