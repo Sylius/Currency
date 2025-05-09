@@ -33,7 +33,7 @@ final class ExchangeRateTest extends TestCase
         self::assertInstanceOf(ExchangeRateInterface::class, $this->exchangeRate);
     }
 
-    public function testShouldHasARatio(): void
+    public function testShouldHaveARatio(): void
     {
         self::assertNull($this->exchangeRate->getRatio());
 
@@ -44,7 +44,7 @@ final class ExchangeRateTest extends TestCase
         self::assertSame(1e-6, $this->exchangeRate->getRatio());
     }
 
-    public function testShouldHasBaseCurrency(): void
+    public function testShouldHaveBaseCurrency(): void
     {
         $currency = $this->createMock(CurrencyInterface::class);
 
@@ -54,7 +54,7 @@ final class ExchangeRateTest extends TestCase
         self::assertSame($currency, $this->exchangeRate->getSourceCurrency());
     }
 
-    public function testShouldHasTargetCurrency(): void
+    public function testShouldHaveTargetCurrency(): void
     {
         $currency = $this->createMock(CurrencyInterface::class);
 
@@ -77,7 +77,7 @@ final class ExchangeRateTest extends TestCase
         self::assertSame($date, $this->exchangeRate->getCreatedAt());
     }
 
-    public function testShouldHasNoLastUpdateDateByDefault(): void
+    public function testShouldHaveNoLastUpdateDateByDefault(): void
     {
         self::assertNull($this->exchangeRate->getUpdatedAt());
     }

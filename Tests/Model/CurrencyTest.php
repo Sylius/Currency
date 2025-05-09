@@ -32,12 +32,12 @@ final class CurrencyTest extends TestCase
         self::assertInstanceOf(CurrencyInterface::class, $this->currency);
     }
 
-    public function testShouldHasNoIdByDefault(): void
+    public function testShouldHaveNoIdByDefault(): void
     {
         self::assertNull($this->currency->getId());
     }
 
-    public function testShouldHasNoCodeByDefault(): void
+    public function testShouldHaveNoCodeByDefault(): void
     {
         self::assertNull($this->currency->getCode());
     }
@@ -72,7 +72,7 @@ final class CurrencyTest extends TestCase
         self::assertSame($date, $this->currency->getCreatedAt());
     }
 
-    public function testShouldHasNoLastUpdateDateByDefault(): void
+    public function testShouldHaveNoLastUpdateDateByDefault(): void
     {
         self::assertNull($this->currency->getUpdatedAt());
     }
