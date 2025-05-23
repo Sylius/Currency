@@ -10,7 +10,7 @@
 
     <testsuites>
         <testsuite name="sylius-currency-component">
-            <directory>./Tests/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
 </phpunit>
